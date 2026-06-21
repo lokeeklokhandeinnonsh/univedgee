@@ -20,7 +20,7 @@ const ReadyToTalk = () => {
   };
 
   return (
-    <section className="py-20 relative bg-brand-dark overflow-hidden border-t border-brand-border">
+    <section className="py-20 relative bg-brand-bg-dark overflow-hidden border-t border-brand-border-dark">
       {/* Background radial gradient */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-brand-blue/10 to-brand-cyan/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -32,16 +32,16 @@ const ReadyToTalk = () => {
           transition={{ duration: 0.7 }}
           className="flex flex-col items-center gap-6"
         >
-          <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-text-primary leading-tight">
+          <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-text-light leading-tight">
             Ready when you are.
           </h2>
-          <p className="text-brand-text-secondary text-base sm:text-lg md:text-xl max-w-2xl">
+          <p className="text-brand-text-muted text-base sm:text-lg md:text-xl max-w-2xl">
             Let's build a team, ship a product, or modernize your system.
           </p>
           <a
             href="#contact"
             onClick={scrollToContact}
-            className="mt-4 px-8 py-4 bg-brand-blue hover:bg-blue-600 text-white font-semibold rounded-lg shadow-[0_4px_14px_rgba(37,99,235,0.3)] hover:shadow-[0_6px_22px_rgba(37,99,235,0.45)] hover:-translate-y-0.5 transition-all duration-300"
+            className="mt-4 px-8 py-4 bg-brand-primary hover:bg-brand-primary-hover text-brand-text-primary font-bold rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
           >
             Book a consultation
           </a>

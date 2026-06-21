@@ -5,18 +5,29 @@
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-display: "Manrope", sans-serif;
   
-  --color-brand-dark: #ffffff;
+  --color-brand-primary: #f59e0b;
+  --color-brand-primary-hover: #d97706;
+  
+  --color-brand-bg-light: #ffffff;
+  --color-brand-bg-dark: #0f172a;
+  
   --color-brand-card: #f8fafc;
   --color-brand-card-hover: #f1f5f9;
+  --color-brand-card-dark: #1e293b;
+  
   --color-brand-blue: #2563eb;
   --color-brand-cyan: #06b6d4;
   --color-brand-accent: #3b82f6;
   --color-brand-accent-glow: rgba(37, 99, 235, 0.05);
+  
   --color-brand-border: rgba(15, 23, 42, 0.08);
+  --color-brand-border-dark: rgba(255, 255, 255, 0.1);
   --color-brand-border-active: rgba(37, 99, 235, 0.25);
+  
   --color-brand-text-primary: #0f172a;
   --color-brand-text-secondary: #475569;
   --color-brand-text-muted: #94a3b8;
+  --color-brand-text-light: #ffffff;
 }
 
 /* Custom global styles */
@@ -25,7 +36,7 @@ html {
 }
 
 body {
-  background-color: var(--color-brand-dark);
+  background-color: var(--color-brand-bg-light);
   color: var(--color-brand-text-primary);
   font-family: var(--font-sans);
   overflow-x: hidden;

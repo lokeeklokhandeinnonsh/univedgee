@@ -22,7 +22,7 @@ const Industries = () => {
   };
 
   return (
-    <section id="industries" className="py-20 relative bg-brand-dark overflow-hidden border-t border-brand-border">
+    <section id="industries" className="py-20 relative bg-brand-bg-light overflow-hidden border-t border-brand-border">
       {/* Background Glow */}
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -30,7 +30,7 @@ const Industries = () => {
         
         {/* Section Header */}
         <div className="text-left mb-16 flex flex-col gap-4">
-          <span className="text-[10px] tracking-widest text-brand-blue uppercase font-bold px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded-full w-fit">
+          <span className="text-xs tracking-widest text-brand-text-muted uppercase font-bold">
             Industries
           </span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-text-primary">
@@ -54,12 +54,7 @@ const Industries = () => {
               className="bg-brand-card hover:bg-brand-card-hover border border-brand-border hover:border-brand-border-active p-8 rounded-2xl flex flex-col justify-between transition-all duration-300 group shadow-lg min-h-[250px]"
             >
               <div className="flex flex-col gap-4 text-left">
-                {/* Stats badge */}
-                <span className="text-[10px] tracking-wide text-brand-cyan font-semibold bg-brand-cyan/10 border border-brand-cyan/20 px-2.5 py-0.5 rounded-full w-fit uppercase">
-                  {ind.projects} • {ind.clients}
-                </span>
-                
-                <h3 className="font-display font-bold text-xl text-brand-text-primary group-hover:text-brand-blue transition-colors duration-300">
+                <h3 className="font-display font-bold text-xl text-brand-text-primary mb-2 transition-colors duration-300">
                   {ind.name}
                 </h3>
                 <p className="text-brand-text-secondary text-sm leading-relaxed">
@@ -67,14 +62,19 @@ const Industries = () => {
                 </p>
               </div>
 
-              <a
-                href="#contact"
-                onClick={scrollToContact}
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-text-primary hover:text-brand-blue mt-8 w-fit transition-colors duration-300 group/btn"
-              >
-                Explore
-                <FiArrowRight className="group-hover/btn:translate-x-1 transition-transform duration-300" />
-              </a>
+              <div className="flex items-center justify-between mt-8 w-full">
+                <span className="text-xs font-bold text-brand-text-primary">
+                  {ind.projects} · {ind.clients}
+                </span>
+                <a
+                  href="#contact"
+                  onClick={scrollToContact}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-text-primary hover:text-brand-primary transition-colors duration-300 group/btn"
+                >
+                  Explore
+                  <FiArrowRight className="group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>

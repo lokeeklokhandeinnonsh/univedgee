@@ -49,9 +49,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 relative bg-brand-dark overflow-hidden border-t border-brand-border">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[140px] pointer-events-none"></div>
+    <section id="contact" className="py-20 relative bg-brand-bg-light overflow-hidden border-t border-brand-border">
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -59,7 +57,7 @@ const ContactSection = () => {
           {/* Left Column: Office Details */}
           <div className="lg:col-span-5 text-left flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <span className="text-[10px] tracking-widest text-brand-blue uppercase font-bold px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded-full w-fit">
+              <span className="text-xs tracking-widest text-brand-text-muted uppercase font-bold">
                 Get In Touch
               </span>
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-text-primary">
@@ -74,7 +72,7 @@ const ContactSection = () => {
             <div className="flex flex-col gap-6 mt-4">
               {/* Office address */}
               <div className="flex gap-4 items-start">
-                <div className="w-10 h-10 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-brand-bg-dark flex items-center justify-center text-white shrink-0">
                   <FiMapPin className="text-lg" />
                 </div>
                 <div>
@@ -85,7 +83,7 @@ const ContactSection = () => {
 
               {/* Phone */}
               <div className="flex gap-4 items-start">
-                <div className="w-10 h-10 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-brand-bg-dark flex items-center justify-center text-white shrink-0">
                   <FiPhone className="text-lg" />
                 </div>
                 <div>
@@ -98,7 +96,7 @@ const ContactSection = () => {
 
               {/* Email */}
               <div className="flex gap-4 items-start">
-                <div className="w-10 h-10 rounded-lg bg-brand-blue/10 flex items-center justify-center text-brand-blue shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-brand-bg-dark flex items-center justify-center text-white shrink-0">
                   <FiMail className="text-lg" />
                 </div>
                 <div>
@@ -113,7 +111,7 @@ const ContactSection = () => {
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7 w-full">
-            <div className="bg-brand-card border border-brand-border p-8 md:p-10 rounded-3xl shadow-2xl relative">
+            <div className="bg-brand-card border border-brand-border p-8 md:p-10 rounded-3xl shadow-sm relative">
               <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 text-left">
                 
                 {/* First Name & Last Name */}
@@ -121,7 +119,7 @@ const ContactSection = () => {
                   {/* First Name */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="firstName" className="text-sm font-semibold text-brand-text-primary">
-                      First name <span className="text-brand-blue">*</span>
+                      First name <span className="text-brand-primary">*</span>
                     </label>
                     <input
                       type="text"
@@ -140,7 +138,7 @@ const ContactSection = () => {
                   {/* Last Name */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="lastName" className="text-sm font-semibold text-brand-text-primary">
-                      Last name <span className="text-brand-blue">*</span>
+                      Last name <span className="text-brand-primary">*</span>
                     </label>
                     <input
                       type="text"
@@ -162,7 +160,7 @@ const ContactSection = () => {
                   {/* Work Email */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="email" className="text-sm font-semibold text-brand-text-primary">
-                      Work email <span className="text-brand-blue">*</span>
+                      Work email <span className="text-brand-primary">*</span>
                     </label>
                     <input
                       type="email"
@@ -224,7 +222,7 @@ const ContactSection = () => {
                 {/* Message / Tell us more */}
                 <div className="flex flex-col gap-2">
                   <label htmlFor="message" className="text-sm font-semibold text-brand-text-primary">
-                    Tell us a bit more <span className="text-brand-blue">*</span>
+                    Tell us a bit more <span className="text-brand-primary">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -244,7 +242,7 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 mt-4 px-6 py-3.5 bg-brand-blue hover:bg-blue-600 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-semibold rounded-lg shadow-[0_4px_14px_rgba(37,99,235,0.25)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.4)] transition-all duration-300 cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 mt-4 px-6 py-3.5 bg-brand-primary hover:bg-brand-primary-hover disabled:bg-amber-800 disabled:cursor-not-allowed text-brand-text-primary font-bold rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
                 >
                   {isSubmitting ? (
                     <>

@@ -41,7 +41,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-brand-dark min-h-screen text-white font-sans antialiased selection:bg-brand-blue selection:text-white">
+    <div className="bg-brand-bg-light min-h-screen text-brand-text-primary font-sans antialiased selection:bg-brand-primary selection:text-brand-bg-dark">
       {/* Toast notifications */}
       <Toaster
         position="top-right"
